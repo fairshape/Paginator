@@ -36,7 +36,7 @@ async def main():
 
     db:  dict = init_db()
 
-    dp.workflow_data(book=book, db=db)
+    dp.workflow_data.update(book=book, db=db)
     await set_main_menu(bot)
     dp.include_router(user_router)
     dp.include_router(other_router)
